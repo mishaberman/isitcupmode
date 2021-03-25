@@ -3,34 +3,39 @@
 <head>
     <title>Is it FIFA 21 Cup Mode?</title>
     <link rel="shortcut icon" type="image/jpg" href="fifa_icon.png" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-        $("form#main_form").submit(function(e) {
-            e.preventDefault(); //dont refresh the page
-
-            $("#signup-form").css('display', 'none'); //hide form
-            $("#thankyou").css('display', 'block'); //show thankyou
+    <script type="text/javascript">
+        $(function () { //shorthand document.ready function
+            $('#main_form').on('submit', function (e) { //use on if jQuery 1.7+
+                e.preventDefault();  //prevent form from submitting
+                var data = $("#main_form :input").serializeArray();
+                console.log(data); //use the console for debugging, F12 in Chrome, not alerts
+                $("#signup-form").css('display', 'none'); //hide form
+                $("#thankyou").css('display', 'block'); //show thankyou
+            });
         });
     </script>
 
-<!-- Facebook Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '276237410705176');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=276237410705176&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Facebook Pixel Code -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '276237410705176');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=276237410705176&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
 
 </head>
 <h1>Is It Cup Mode?</h1>
@@ -41,13 +46,16 @@
     <h2>Sign up for email notifications when cup mode is active</h2>
 
     <form id="main_form" method="post">
-        <input type="email" name="email" id="fremail" placeholder="your@email.com" value="test@test.com" required/>
-        <input type="text" pattern="[a-z0-9. -]+" title="Please enter only alphanumeric characters." name="Name" id="frtitle" placeholder="Name" value="test" required/>
-        <input type="submit" name="Submit" value="Continue" id="submit-form-btn" />
+        <input type="email" name="email" id="fremail" placeholder="your@email.com" value="test@test.com" required />
+        <input type="text" pattern="[a-z0-9. -]+" title="Please enter only alphanumeric characters." name="Name"
+            id="frtitle" placeholder="Name" value="test" required />
+        <input type="submit" value="Continue" />
     </form>
 
 </div>
 
-<div id="thankyou" style="display: none;"></div>
+<div id="thankyou" style="display: none;">
+    Thank you for your submission!
+</div>
 
 </html>
