@@ -108,3 +108,12 @@ body {
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
+
+
+/*
+* Mine
+*/
+
+.left-list {
+    text-align: left;
+}
