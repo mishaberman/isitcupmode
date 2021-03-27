@@ -4,6 +4,8 @@
     <title>Is it FIFA 21 Cup Mode?</title>
     <link rel="shortcut icon" type="image/jpg" href="fifa_icon.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="cover.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
 
     <script type="text/javascript">
         $(function () { //shorthand document.ready function
@@ -38,24 +40,48 @@
     <!-- End Facebook Pixel Code -->
 
 </head>
-<h1>Is It Cup Mode?</h1>
-<div>
-    <p>No :(</p>
-</div>
-<div id="signup-form">
-    <h2>Sign up for email notifications when cup mode is active</h2>
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+          <div class="inner">
+            <h3 class="masthead-brand">Is It Cup Mode?</h3>
+            <nav class="nav nav-masthead justify-content-center">
+              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Contact</a>
+            </nav>
+          </div>
+        </header>
 
-    <form id="main_form" method="post">
-        <input type="email" name="email" id="fremail" placeholder="your@email.com" value="test@test.com" required />
-        <input type="text" pattern="[a-z0-9. -]+" title="Please enter only alphanumeric characters." name="Name"
-            id="frtitle" placeholder="Name" value="test" required />
-        <input type="submit" value="Continue" />
-    </form>
+        <main role="main" class="inner cover">
+            <h1>No :(</h1>
 
-</div>
+            <div id="signup-form">
+                <p>Sign up for email notifications when cup mode is active</p>
 
-<div id="thankyou" style="display: none;">
-    Thank you for your submission!
-</div>
+                <form id="main_form" method="post">
+                    <input type="email" name="email" id="fremail" placeholder="your@email.com" value="test@test.com" required />
+                    <input type="text" pattern="[a-z0-9. -]+" title="Please enter only alphanumeric characters." name="Name"
+                        id="frtitle" placeholder="Name" value="test" required />
+                    <input type="submit" value="Continue" />
+                </form>
 
+            </div>
+
+            <div id="thankyou" style="display: none;">
+                Thank you for your submission!
+            </div>
+        </main>
+
+        <footer class="mastfoot mt-auto">
+          <div class="inner">
+            <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+          </div>
+        </footer>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')</script>
+    <script src="/popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</body>
 </html>
