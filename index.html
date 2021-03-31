@@ -15,15 +15,11 @@
                 console.log(data); //use the console for debugging, F12 in Chrome, not alerts
                 $("#signup-form").css('display', 'none'); //hide form
                 $("#thankyou").css('display', 'block'); //show thankyou
-
-                fbq('init', '276237410705176',
-                {
+                fbq('track', 'Lead', {
                     em: document.getElementById("email").value,
                     fn: document.getElementById("firstName").value,
                     ln: document.getElementById("lastName").value
                 });
-
-                fbq('track', 'Lead');
             });
         });
     </script>
