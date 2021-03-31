@@ -21,7 +21,7 @@
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
 
-        fbq('consent', $("#cookiesCheckbox").checked ? 'grant' : 'revoke');
+        fbq('consent', $("#cookiesCheckbox")[0].checked ? 'grant' : 'revoke');
         fbq('init', '276237410705176');
         fbq('track', 'PageView');
     </script>
@@ -31,7 +31,7 @@
     <!-- End Facebook Pixel Code -->
 
     <script>
-      $("#cookiesCheckbox").change(function() {
+      $("#cookiesCheckbox")[0].change(function() {
         fbq('consent', this.checked ? 'grant' : 'revoke');
       });
     </script>
