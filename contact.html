@@ -33,8 +33,8 @@
     <script>
 
       $( document ).ready(function() {
-        fbq('consent', $("#cookiesCheckbox")[0].checked ? 'grant' : 'revoke');
-        $("#cookiesCheckbox")[0].change(function() {
+        fbq('consent', $("#cookiesCheckbox").checked ? 'grant' : 'revoke');
+        $("#cookiesCheckbox").change(function() {
           fbq('consent', this.checked ? 'grant' : 'revoke');
         });
       });
