@@ -33,7 +33,12 @@
             s.parentNode.insertBefore(t, s)
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '276237410705176');
+        fbq('init', '276237410705176',
+        {
+            em: document.getElementById("email").innerText,
+            fn: document.getElementById("firstName").innerText,
+            ln: document.getElementById("lastName").innerText
+        });
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
@@ -62,9 +67,11 @@
                 <p>Sign up for email notifications when cup mode is active</p>
 
                 <form id="main_form" method="post">
-                    <input type="email" name="email" id="fremail" placeholder="your@email.com" value="test@test.com" required />
-                    <input type="text" pattern="[a-z0-9. -]+" title="Please enter only alphanumeric characters." name="Name"
-                        id="frtitle" placeholder="Name" value="test" required />
+                    <input type="email" name="email" id="email" placeholder="your@email.com" value="bruceW@gmail.com" required />
+                    <input type="text" pattern="[a-z0-9. -]+" title="Please enter only alphanumeric characters." name="First Name"
+                        id="firstName" placeholder="First Name" value="Bruce" required />
+                    <input type="text" pattern="[a-z0-9. -]+" title="Please enter only alphanumeric characters." name="Last Name"
+                    id="lastName" placeholder="Last Name" value="Wayne" required />
                     <input type="submit" value="Continue" />
                 </form>
 
