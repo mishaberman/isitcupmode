@@ -20,6 +20,8 @@
             s.parentNode.insertBefore(t, s)
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('consent', $(".cookiesCheckbox").checked ? 'grant' : 'revoke');
         fbq('init', '276237410705176');
         fbq('track', 'PageView');
     </script>
@@ -27,6 +29,12 @@
       <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=276237410705176&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Facebook Pixel Code -->
+
+    <script>
+      $(".cookiesCheckbox").change(function() {
+        fbq('consent', this.checked ? 'grant' : 'revoke');
+      });
+    </script>
 </head>
 <body class="text-center">
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
@@ -51,7 +59,7 @@
 
             <br/>
             Subscribe?&nbsp;
-            <input id="chkThis" type="checkbox" />
+            <input id="cookiesCheckbox" type="checkbox" value="Consent to cookies" />
             <br />
             <input type="button" title="Subscribe" id="btnSubscribe" value="Subscribe"/>
 
