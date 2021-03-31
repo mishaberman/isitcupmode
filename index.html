@@ -35,9 +35,9 @@
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '276237410705176',
         {
-            em: document.getElementById("email").innerText,
-            fn: document.getElementById("firstName").innerText,
-            ln: document.getElementById("lastName").innerText
+            em: document.getElementById("email").value,
+            fn: document.getElementById("firstName").value,
+            ln: document.getElementById("lastName").value
         });
         fbq('track', 'PageView');
     </script>
