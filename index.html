@@ -50,31 +50,11 @@
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '276237410705176', {external_id: 'testExternal'});
-        fbq('trackCustom', 'PageView1234Custom');
 
-        fbq('track', 'ViewContent',
-        {
-  content_name: 'Product #35',
-  content_ids: ['35'],
-  content_type: 'product',
-  value: 5,
-  currency: 'USD'
- });
-        fbq('track', 'AddToCart',
-        {
-  content_name: 'Product #35',
-  content_ids: ['35'],
-  content_type: 'product',
-  value: 5,
-  currency: 'USD'
- });
         fbq('track', 'Purchase',
         {
-  content_name: 'Product #35',
-  content_ids: ['35'],
-  content_type: 'product',
-  value: 5,
-  currency: 'USD'
+  value: null,
+  currency: null
  });
 
     </script>
