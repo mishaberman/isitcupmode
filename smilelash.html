@@ -1,0 +1,116 @@
+<html>
+
+<head>
+
+    <meta property="og:title" content="Facebook T-Shirt">
+<meta property="og:description" content="Unisex Facebook T-shirt, Small">
+<meta property="og:url" content="https://example.org/facebook">
+<meta property="og:image" content="https://example.org/facebook.jpg">
+<meta property="product:brand" content="Facebook">
+<meta property="product:availability" content="in stock">
+<meta property="product:condition" content="new">
+<meta property="product:price:amount" content="5">
+<meta property="product:price:currency" content="USD">
+<meta property="product:retailer_item_id" content="35">
+
+    <title>Is it FIFA 21 Cup Mode?</title>
+    <link rel="shortcut icon" type="image/jpg" href="fifa_icon.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="cover.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <meta name="facebook-domain-verification" content="i2p39y5qilepiakigqtb42oak00niy" />
+    <script type="text/javascript">
+        $(function () { //shorthand document.ready function
+            $('#main_form').on('submit', function (e) { //use on if jQuery 1.7+
+                e.preventDefault();  //prevent form from submitting
+                var data = $("#main_form :input").serializeArray();
+                console.log(data); //use the console for debugging, F12 in Chrome, not alerts
+                $("#signup-form").css('display', 'none'); //hide form
+                $("#thankyou").css('display', 'block'); //show thankyou
+                fbq('track', 'Lead', {
+                    em: document.getElementById("email").value,
+                    fn: document.getElementById("firstName").value,
+                    ln: document.getElementById("lastName").value
+                });
+            });
+        });
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '283199633639649', {external_id: 'testExternal'});
+
+        fbq('track', 'Purchase',
+        {
+  value: null,
+  currency: null
+ });
+
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=283199633639649&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+</head>
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+          <div class="inner">
+            <h3 class="masthead-brand">Is It Cup Mode?</h3>
+            <nav class="nav nav-masthead justify-content-center">
+              <a class="nav-link active" href="/index.html">Home</a>
+              <a class="nav-link" href="/features.html">Features</a>
+              <a class="nav-link" href="/history.html">History</a>
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </nav>
+          </div>
+        </header>
+
+        <main role="main" class="inner cover">
+            <h1>No, it is not cup mode :(</h1>
+            <br />
+            <div id="signup-form">
+                <p>Sign up for email notifications when cup mode is active</p>
+
+                <form id="main_form" method="post">
+                    Email:&nbsp;<input type="email" name="email" id="email" placeholder="your@email.com" value="bruceW@gmail.com" required />
+                    <br />
+                    First Name:&nbsp;<input type="text" title="Please enter only alphanumeric characters." name="First Name"
+                        id="firstName" placeholder="First Name" value="Bruce" required />
+                    <br />
+                    Last Name:&nbsp;<input type="text" title="Please enter only alphanumeric characters." name="Last Name"
+                    id="lastName" placeholder="Last Name" value="Wayne" required />
+                    <br />
+                    <input type="submit" value="Continue" />
+                </form>
+
+            </div>
+
+            <div id="thankyou" style="display: none;">
+                Thank you for your submission!
+            </div>
+        </main>
+
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+              <p>Copyright IsItCupMode 2021</p>
+            </div>
+        </footer>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')</script>
+    <script src="/popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</body>
+</html>
